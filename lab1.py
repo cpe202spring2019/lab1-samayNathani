@@ -29,6 +29,8 @@ def bin_search(target, low, high, int_list):  # must use recursion
       else:
          if target < int_list[mid]:
             high = mid - 1
+            bin_search(target, low, high, int_list)
          else:
             low = mid + 1
+            bin_search(target, low, high, int_list)
    return idx
