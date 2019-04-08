@@ -50,7 +50,10 @@ class TestLab1(unittest.TestCase):
         low = 0
         high = len(list_val)-1
         self.assertEqual(bin_search(4, 0, len(list_val)-1, list_val), None)
+    
+    def test_bin_search5(self):
+        list_val =None
+        with self.assertRaises(ValueError):
+            bin_search(1,0,1,list_val)
 if __name__ == "__main__":
         unittest.main()
-
-    
